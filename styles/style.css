@@ -2,3 +2,12 @@ img {
     max-width: 100vw;
     max-height: 100vh;
 }
+.door{
+    max-width: 300px;
+    max-height: 300px;
+}
+#picturematrix {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
