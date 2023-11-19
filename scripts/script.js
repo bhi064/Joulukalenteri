@@ -34,6 +34,18 @@ function setPermissions(){
     }
 }
 
+function openImageInNewWindow(elementId){
+    const element = document.getElementById('box'+elementId);
+    const day = parseInt(elementId)-1;
+    if (globalBooleanArray[day]){
+        const randomized = "pictures/day" + (day+1) +"/"+ getRandomIntInclusive(1,3)+".jpg";
+        window.open(randomized, 'Image', 'width=300px,height=300px,resizable=1');
+    } else {
+        console.log("It is not yet time to open that door!")
+    }
+    
+}
+
 // copied from MDM documentation
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 function getRandomIntInclusive(min, max) {
