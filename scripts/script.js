@@ -6,19 +6,34 @@ function openDoor(elementId){
     const element = document.getElementById(''+elementId);
     const day = parseInt(elementId)-1;
     if (globalBooleanArray[day] && !doorOpened[day]){
-        const randomized = "pictures/day" + (day+1) +"/"+ getRandomIntInclusive(1,3)+".jpg";
-        element.setAttribute('src', ''+randomized);
+        element.setAttribute('src', "pictures/open.jpg");
+        openImageInNewWindow(elementId);
         doorOpened[day] = true;
     } else if (doorOpened[day]) {
-        console.log("The door for day "+ (day+1)+ " has already been opened!")
+        closeDoor(elementId);
     } else {
-        console.log("It is not yet time to open that door!")
+        window.alert("It is not yet time to open that door!")
+        console.log("User tried to open a door prematurely.")
+    }
+}
+
+function closeDoor(elementId){
+    const element = document.getElementById(""+elementId);
+    const day = parseInt(elementId)-1;
+    if (doorOpened[day]){
+        const text = "Door for day " + (day+1) + " has already been opened. Close door?"
+        if (confirm(text)){
+            doorOpened[day] = false;
+            element.setAttribute('src', "pictures/closed.jpg");
+        } else {
+            console.log("User changed their mind about closing the door for day "+ day);
+        }
     }
 }
 
 function setPermissions(){
     //TODO: remember to set correct constructor for "today" once all folders have pictures in them!
-    const today = new Date(2023, 11, 1);
+    const today = new Date(2023, 11, 5);
     const xmas2023 = new Date(2023, 11, 24);
     const dateDifferenceInMs = xmas2023 - today;
     let daysUntilXmas = 365;
