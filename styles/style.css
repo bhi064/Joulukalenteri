@@ -5,12 +5,25 @@ img {
 .door{
     width: 250px;
     height: 300px;
+    border: 10px;
+    border-color: black;
+    margin: auto;
 }
 #picturematrix {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    overflow-wrap: normal;
+    border: 10px;
+    border-color: black;
+
 }
 .box {
     padding: 3px;
+
+}
+body{
+    background-image: url(../pictures/elena-mozhvilo-joulukalenteri.jpg);
+    background-size: 100vw;
+    margin: auto;
 }
