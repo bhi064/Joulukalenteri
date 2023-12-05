@@ -33,7 +33,7 @@ function closeDoor(elementId){
 
 function setPermissions(){
     //TODO: remember to set correct constructor for "today" once all folders have pictures in them!
-    const today = new Date(2023, 11, 11);
+    const today = new Date(2023,11,11);
     const xmas2023 = new Date(2023, 11, 24);
     const dateDifferenceInMs = xmas2023 - today;
     let daysUntilXmas = 365;

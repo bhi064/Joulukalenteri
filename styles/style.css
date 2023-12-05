@@ -42,3 +42,6 @@ body{
     background-size: 100vw;
     margin: auto;
 }
+#1 {
+    border-radius: 5%;
+}
