@@ -26,15 +26,20 @@ img {
     border: 10px;
     border-color: black;
     margin: auto;
-    padding: 5px;
+    padding: 1px 85px 85px 85px;
+    position: fixed; 
+    align-items: center;   /* rivien keskitystä*/
+    justify-content: center; /* rivien keskitystä */
+
 }
 
 .box {
     height: 300px;
     width: 250px;
-    padding: 2px;
+    padding: 7px;
     border: 3px;
     border-color: black;
+    flex-basis: 20%; /* Yritys saada 4kpl ovia per rivi */
 
 }
 body{
