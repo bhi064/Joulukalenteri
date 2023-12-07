@@ -3,8 +3,16 @@
     src: url(../font/MOOD\ MKII.ttf) format('truetype');
 }
 
+.logo {
+    width: 50px;
+    height: 50px;
+    position: flex; 
+}
+
 h1{
     font-family: "MOOD MKII";
+    text-align: center;
+    color: rgb(240, 235, 235);
 }
 
 img {
@@ -13,10 +21,12 @@ img {
 }
 .door{
     width: 250px;
-    height: 300px;
+    height: 265px;
     border: 10px;
-    border-color: black;
+    border-color: rgb(0, 0, 0);
     margin: auto;
+    border-radius:1dvh;
+    box-shadow: 1px 1px 12px #ffffff;
 }
 #picturematrix {
     display: flex;
@@ -42,9 +52,13 @@ img {
 
 }
 body{
-    background-image: url(../pictures/elena-mozhvilo-joulukalenteri.jpg);
-    background-size: 100vw;
-    margin: auto;
+    background-image: url(/pictures/Tausta.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
 }
 #1 {
     border-radius: 5%;
