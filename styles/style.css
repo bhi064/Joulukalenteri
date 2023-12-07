@@ -26,8 +26,7 @@ img {
     border: 10px;
     border-color: black;
     margin: auto;
-    padding: 1px 85px 85px 85px;
-    position: fixed; 
+    padding: 1px 65px 85px 65px;
     align-items: center;   /* rivien keskitystä*/
     justify-content: center; /* rivien keskitystä */
 
@@ -46,4 +45,7 @@ body{
     background-image: url(../pictures/elena-mozhvilo-joulukalenteri.jpg);
     background-size: 100vw;
     margin: auto;
+}
+#1 {
+    border-radius: 5%;
 }

@@ -1,5 +1,6 @@
 const globalBooleanArray = new Array(24).fill(false);
 const doorOpened = new Array(24).fill(false);
+
 setPermissions();
 
 function openDoor(elementId){
@@ -12,8 +13,8 @@ function openDoor(elementId){
     } else if (doorOpened[day]) {
         closeDoor(elementId);
     } else {
-        window.alert("It is not yet time to open that door!")
-        console.log("User tried to open a door prematurely.")
+        window.alert("It is not yet time to open that door!");
+        console.log("User tried to open a door prematurely.");
     }
 }
 
@@ -21,19 +22,18 @@ function closeDoor(elementId){
     const element = document.getElementById(""+elementId);
     const day = parseInt(elementId)-1;
     if (doorOpened[day]){
-        const text = "Door for day " + (day+1) + " has already been opened. Close door?"
+        const text = "Door for day " + (day+1) + " has already been opened. Close door?";
         if (confirm(text)){
             doorOpened[day] = false;
-            element.setAttribute('src', "pictures/closed.jpg");
+            element.setAttribute('src', "pictures/closed/closed" + (day+1) + ".jpg");
         } else {
-            console.log("User changed their mind about closing the door for day "+ day);
+            console.log("User changed their mind about closing the door for day "+ (day+1));
         }
     }
 }
 
 function setPermissions(){
-    //TODO: remember to set correct constructor for "today" once all folders have pictures in them!
-    const today = new Date(2023, 11, 11);
+    const today = new Date();
     const xmas2023 = new Date(2023, 11, 24);
     const dateDifferenceInMs = xmas2023 - today;
     let daysUntilXmas = 365;
@@ -56,7 +56,7 @@ function openImageInNewWindow(elementId){
         const randomized = "pictures/day" + (day+1) +"/"+ getRandomIntInclusive(1,3)+".jpg";
         window.open(randomized, 'Image', 'width=300px,height=300px,resizable=1');
     } else {
-        console.log("It is not yet time to open that door!")
+        console.log("It is not yet time to open that door!");
     }
     
 }
