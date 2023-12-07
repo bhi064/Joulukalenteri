@@ -52,7 +52,7 @@ img {
 
 }
 body{
-    background-image: url(/pictures/Tausta.jpg);
+    background-image: url(../pictures/Tausta.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
